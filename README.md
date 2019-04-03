@@ -1,1 +1,1 @@
-# vue-project-helper
+# vue-app-helper
