@@ -1,0 +1,28 @@
+{
+  "name": "vue-app-helper",
+  "description": "My collection of helper function I like to use in Vue.js projects",
+  "repository": "https://github.com/dtkahl/vue-app-helper",
+  "version": "0.1.0",
+  "main": "dist/vue-app-helper.common.js",
+  "scripts": {
+    "build": "vue-cli-service build --target lib --name vue-app-helper src/vue-app-helper.js",
+    "serve": "vue-cli-service serve",
+    "lint": "vue-cli-service lint"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.6",
+    "vue-router": "^3.0.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.5.0",
+    "@vue/cli-plugin-eslint": "^3.5.0",
+    "@vue/cli-service": "^3.5.0",
+    "@vue/eslint-config-prettier": "^4.0.1",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "vue": "^2.6.6",
+    "vue-router": "^3.0.2",
+    "vue-template-compiler": "^2.5.21"
+  }
+}
