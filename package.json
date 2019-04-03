@@ -4,6 +4,10 @@
   "repository": "https://github.com/dtkahl/vue-app-helper",
   "version": "0.1.0",
   "main": "dist/vue-app-helper.common.js",
+  "files": [
+    "dist/vue-app-helper.*",
+    "src/vue-app-helper.js"
+  ],
   "scripts": {
     "build": "vue-cli-service build --target lib --name vue-app-helper src/vue-app-helper.js",
     "serve": "vue-cli-service serve",
