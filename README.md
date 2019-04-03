@@ -3,10 +3,10 @@
 ## Installation
 
 ```bash
-npm install
+npm install vue-app-helper
 ```
 
-## usage
+## Usage Example
 
 ```js
 // in your entry point
