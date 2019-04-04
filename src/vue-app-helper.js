@@ -60,7 +60,7 @@ export function mergeRouteMeta(route) {
     route = {};
   }
   return (route.matched || []).reduce(
-    (result, meta) => ({ ...result, ...meta }),
+    (result, matchedRoute) => ({ ...result, ...matchedRoute.meta || {} }),
     {}
   );
 }
