@@ -8,25 +8,21 @@
     "lib/*"
   ],
   "scripts": {
-    "build": "rollup src/vue-app-helper.js --format cjs --file lib/vue-app-helper.js",
-    "serve": "vue-cli-service serve",
-    "lint": "vue-cli-service lint"
+    "build": "node build/build.js"
   },
   "peerDependencies": {
+    "regenerator-runtime": "^0.13.2",
     "vue": "^2.6.6",
     "vue-router": "^3.0.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.5.0",
-    "@vue/cli-plugin-eslint": "^3.5.0",
-    "@vue/cli-service": "^3.5.0",
-    "@vue/eslint-config-prettier": "^4.0.1",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.8.0",
-    "eslint-plugin-vue": "^5.0.0",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "core-js": "3.0.0",
+    "prettier": "^1.16.4",
     "rollup": "^1.8.0",
-    "vue": "^2.6.6",
-    "vue-router": "^3.0.2",
-    "vue-template-compiler": "^2.5.21"
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.3.3",
+    "rollup-plugin-node-resolve": "^4.0.1"
   }
 }
