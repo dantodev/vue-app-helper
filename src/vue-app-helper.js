@@ -29,8 +29,8 @@ export function registerApp(name, { routes = [], hooks = {} } = {}) {
       mergedMetaFrom.appName !== name && mergedMetaTo.appName === name;
     let isLeave =
       !isEnter &&
-      mergedMetaFrom.appName !== name &&
-      mergedMetaTo.appName === name;
+      mergedMetaFrom.appName === name &&
+      mergedMetaTo.appName !== name;
 
     if (isEnter && !initialized) {
       if (hooks.initialize instanceof Function) {
@@ -39,12 +39,12 @@ export function registerApp(name, { routes = [], hooks = {} } = {}) {
       initialized = true;
     }
 
-    if (isEnter && hooks.enter instanceof Function) {
-      await hooks.enter();
+    if (isEnter && hooks.beforeEnter instanceof Function) {
+      await hooks.beforeEnter();
     }
 
-    if (isLeave && hooks.leave instanceof Function) {
-      await hooks.leave();
+    if (isLeave && hooks.beforeLeave instanceof Function) {
+      await hooks.beforeLeave();
     }
 
     next();
