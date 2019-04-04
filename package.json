@@ -3,7 +3,7 @@
   "description": "My collection of helper function I like to use in Vue.js projects",
   "repository": "https://github.com/dtkahl/vue-app-helper",
   "version": "0.1.1",
-  "main": "dist/vue-app-helper.js",
+  "main": "lib/vue-app-helper.js",
   "files": [
     "lib/*"
   ],
