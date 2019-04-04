@@ -55,11 +55,11 @@ export function makeRoute(path, name, component, meta = {}) {
   return { name, path, component, meta, props: true };
 }
 
-export function mergeRouteMeta(meta) {
-  if (!meta) {
-    meta = {};
+export function mergeRouteMeta(route) {
+  if (!route) {
+    route = {};
   }
-  return (meta.matches || []).reduce(
+  return (route.matched || []).reduce(
     (result, meta) => ({ ...result, ...meta }),
     {}
   );
