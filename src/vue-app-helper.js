@@ -23,7 +23,7 @@ export function registerApp(name, { routes = [], hooks = {} } = {}) {
   );
 
   router.beforeEach(async (to, from, next) => {
-    let mergedMetaTo = mergeRouteMeta(from.to);
+    let mergedMetaTo = mergeRouteMeta(to.meta);
     let mergedMetaFrom = mergeRouteMeta(from.meta);
     let isEnter =
       mergedMetaFrom.appName !== name && mergedMetaTo.appName === name;
