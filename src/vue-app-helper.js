@@ -18,6 +18,7 @@ export function registerApp(name, { routes = [], hooks = {} } = {}) {
         route.meta = {};
       }
       route.meta.appName = name;
+      return route;
     })
   );
 

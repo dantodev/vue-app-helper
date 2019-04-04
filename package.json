@@ -3,13 +3,12 @@
   "description": "My collection of helper function I like to use in Vue.js projects",
   "repository": "https://github.com/dtkahl/vue-app-helper",
   "version": "0.1.0",
-  "main": "dist/vue-app-helper.common.js",
+  "main": "dist/vue-app-helper.js",
   "files": [
-    "dist/vue-app-helper.*",
-    "src/vue-app-helper.js"
+    "lib/*"
   ],
   "scripts": {
-    "build": "vue-cli-service build --target lib --name vue-app-helper src/vue-app-helper.js",
+    "build": "rollup src/vue-app-helper.js --format cjs --file lib/vue-app-helper.js",
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint"
   },
@@ -25,6 +24,7 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
+    "rollup": "^1.8.0",
     "vue": "^2.6.6",
     "vue-router": "^3.0.2",
     "vue-template-compiler": "^2.5.21"
