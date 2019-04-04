@@ -2,7 +2,7 @@
   "name": "vue-app-helper",
   "description": "My collection of helper function I like to use in Vue.js projects",
   "repository": "https://github.com/dtkahl/vue-app-helper",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "main": "lib/vue-app-helper.js",
   "files": [
     "lib/*"
