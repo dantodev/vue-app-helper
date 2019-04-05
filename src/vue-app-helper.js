@@ -1,7 +1,9 @@
+let app = null;
 let router = null;
 
 export default {
   install(Vue, config = {}) {
+    app = Vue;
     router = config.router;
     if (!router) {
       throw "vue-app-helper needs vue-router instance.";
@@ -34,17 +36,17 @@ export function registerApp(name, { routes = [], hooks = {} } = {}) {
 
     if (isEnter && !initialized) {
       if (hooks.initialize instanceof Function) {
-        await hooks.initialize();
+        await hooks.initialize.call(app);
       }
       initialized = true;
     }
 
     if (isEnter && hooks.beforeEnter instanceof Function) {
-      await hooks.beforeEnter();
+      await hooks.beforeEnter.call(app);
     }
 
     if (isLeave && hooks.beforeLeave instanceof Function) {
-      await hooks.beforeLeave();
+      await hooks.beforeLeave.call(app);
     }
 
     next();
